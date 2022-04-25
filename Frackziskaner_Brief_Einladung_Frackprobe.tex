@@ -1,0 +1,123 @@
+\documentclass[fontsize=11pt,
+version=last,
+fromlogo=true]{scrlttr2} 
+% 
+% \usepackage[utf8]{inputenc} 
+\usepackage{fontenc} 
+\usepackage[ngerman]{babel} 
+\usepackage{lmodern}                  % Schriftart (hauptsache bei Lebenslauf gleich) 
+\renewcommand*\familydefault{\sfdefault}   % sorgt für serifenlose Schrift (auch wie bei Lebenslauf) 
+\usepackage{microtype}                  % optional, aber schöner 
+\usepackage{ellipsis}                  % optional, aber schöner 
+\usepackage{xcolor}                        % Farben für eigenes Layout 
+\usepackage{marvosym}                      % Symbole für eigenes Layout 
+\usepackage{graphicx}
+\usepackage{yfonts}
+\usepackage{enumitem}
+\LoadLetterOption{DIN}                  % Einstellungen für DIN 676 laden 
+\renewcommand*{\raggedsignature}{\raggedright}  % Signatur wird bündig gesetzt
+\setlength{\textwidth}{150mm}
+% 
+%--------------------------------------------------------------------------- 
+%--------------------------------------------------------------------------- 
+\begin{document} 
+%
+% Daten des Präsidenten
+% 
+\newcommand{\mFrackziskaner}{Frackziskaner}
+\newcommand{\mVorname}{Tim} 
+\newcommand{\mNachname}{Hogeback} 
+\newcommand{\mStrasse}{Uhlandstraße 20} 
+\newcommand{\mStadt}{Wildeshausen} 
+\newcommand{\mPLZ}{27793} 
+\newcommand{\mTelefon}{0160 97510171} 
+\newcommand{\mEMail}{hogeback.tim@gmail.com} 
+%
+\setkomavar{date}{\today} 
+
+% 
+%--------------------------------------------------------------------------- 
+% Absender aus der Eingabe den Daten des Präsidenten
+% 
+\setkomavar{fromname}{\mVorname{}~\mNachname{}}               % Name 
+\setkomavar{fromaddress}{\mStrasse{}\\{}\mPLZ{}~\mStadt{}}    % Adresse 
+\setkomavar{fromphone}{\mTelefon{}}                           % Telefonnummer 
+\setkomavar{fromemail}{\mEMail{}}                             % Email-Adresse 
+\setkomavar{place}{\mStadt{}}                                 % Ort 
+\setkomavar{signature}{\mVorname{}~\mNachname{} - Präsident}            % Signatur 
+\setkomavar{fromlogo}{\includegraphics[scale=1.2]{bilder/Frackziskaner_Logo_einzeln.pdf}}
+% 
+% 
+%--------------------------------------------------------------------------- 
+% FARBEN (aus "\texlive\2013\texmf-dist\tex\latex\moderncv\moderncvcolorblue.sty") 
+% 
+\definecolor{color0}{rgb}{0,0,0}             % Schwarz (normale Schrift) 
+\definecolor{color2}{rgb}{0.45,0.45,0.45}    % Dunkles Grau (zum Abheben) 
+%%%\color{color2!50}                         % Nur zur Info: Helles Grau (zum Abheben) 
+% 
+%--------------------------------------------------------------------------- 
+% 
+% EIGENER BRIEFKOPF
+% 
+%\adrentry{Name}{Vorame}{Strasse}{PLZ Ort}{Mitglied}{Funktion}{}{}
+\setkomavar{firsthead}{    
+	\begin{flushleft} 
+		{		
+		\fontfamily{bch}
+		\fontsize{38}{40}
+		\selectfont                % Schriftgröße für Namen 
+		\color{color2}\mFrackziskaner}  \\     % Farbe für Nachnamen und Abstand zu Trennlinie 
+	Pfingstclub zu Wildeshausen
+	\end{flushleft} 
+	\setlength{\unitlength}{1truemm}
+	\begin{picture}(0,0)(-110,30)
+	\usekomavar{fromlogo}
+	\end{picture} 
+	%---------------------------------------------------- 
+} 
+% 
+%================================================================================== 
+% BEGINN 
+% 
+	% 
+\renewcommand{\adrentry}[8]{ %
+	\begin{letter}{#6 \\ #2 #1 \\ #3 \\ #4} %\textbf{Test}\\ a\\ Teststr. 1\\ 11111 Stadt} 
+		% 
+		\setkomavar{subject}{Frackprobe zum 617ten Gildefest} 
+		% 
+		\opening{Sehr geehrter Herr #1,} 
+		%
+		anl\"asslich des 617ten Gildefests lade ich Sie hiermit zur Frackprobe des Gildeclubs Frackziskaner am Samstag, den 08. Februar 2020, 19.00 Uhr in die Sand\"ackerstr. 54 in 72070 T\"ubingen ein. Anl\"asslich dieses gro\ss en Ereignisses ist für das leibliche Wohl gesorgt. Zur Frackprobe besteht Frackpflicht nach \S11 der Frackziskaner-Satzung. Abweichend von \S11 Satz 3 ist für diesen Termin das Holzgewehr kein Bestandteil des Fracks und muss somit nicht mitgeführt werden. %Nach Paragraph §6 der Frackziskaner Satzung, ist das Tragen des Fracks zur Frackprobe pflicht.
+		%Das 614. Gildefest rückt immer näher. Anlässlich zu dieser Veranstaltungen sind noch einige Vorbereitungen zu treffen. Somit findet unsere diesjährige Frackprobe am Samstag den 25. März 2017 um 19Uhr statt.\\
+				%
+		\begin{center}\textbf{\Large Tagesordnung}\end{center}
+%		\setlength{\itemsep}{10pt}
+		\begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+			\item Eröffnung und Begr\"u\ss ung
+			\item Verlesen der Tagesordnung
+			\item Feststellung der ordnungsgem\"ä\ss en Einberufung
+			\item Mitgliederbestand
+			\item Kassenbericht 2019/20
+			\item Feststellung des vorschriftsgem\"a\ss en Nachkommens der Frackpflicht
+			\item Anh\"orung der Frackziskaneranw\"arter
+			\item Planung der anzuschaffenden Werbemittel 2020
+			\item Verschiedenes
+		\end{enumerate}
+		% 
+		\closing{Mit freundlichen Gr\"u\ss en,} 
+		% 
+		%---------------------------------------------------------------------------------- 
+		% Weitere mögliche Felder: 
+		% 
+		%\ps PS: \dots                     % Postskriptum 
+		%\setkomavar*{enclseparator}{Anlage}   % Überschrift für Anlagen (z.B. "Anlage") 
+		%\encl{Anlage 1\\ Anlage 2}            % Anlagen 
+		%\setkomavar*{ccseparator}{Kopie an}   % Text für Verteiler (z.B. "Kopie an") 
+		%\cc{Verteiler 1\\ Verteiler 2}         % Liste des Verteilers 
+		% 
+		%================================================================================== 
+		% 
+	\end{letter}}
+\input{Mitglieder.adr} 
+\end{document} 
+%
